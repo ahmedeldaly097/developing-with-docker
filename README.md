@@ -11,28 +11,30 @@ All components are docker-based
 
 #### To start the application
 
-Step 1: start mongodb and mongo-express
+Step 1: Pull mongodb and mongo-express images on your machine.
 
-    docker-compose -f docker-compose.yaml up -d
-    
-_You can access the mongo-express under localhost:8080 from your browser_
-    
-Step 2: in mongo-express UI - create a new database "my-DataBase"
+    docker pull mongo
+    docker pull mongo-express
 
-Step 3: in mongo-express UI - create a new collection "users" in the database "my-DataBase"       
-    
-Step 4: start node server 
+Step 2: Build your Web_App using Dockerfile and give it a Tag.
 
-    cd app
-    npm install
-    node server.js
-    
-Step 5: access the nodejs application from browser 
-
-    http://localhost:3000
-
-#### To build a docker image from the application
-
-    docker build -t my_web_app:1.0 .       
+    docker build -t my_web_app:1.0 .
     
 The dot "." at the end of the command denotes location of the Dockerfile.
+
+Step 3: Push the image to the AWS ECR.
+
+    docker push <AWS ECR> 
+    
+Step 4: Run container images from mongodb, mongo-express and ECR images using docker-compose in detached mode.
+
+    docker-compose -f docker-compose.yaml up -d
+
+
+Step 5: access the mongo-express application from your browser.
+
+    http://localhost:8081
+
+Step 6: access the nodejs application from browser 
+
+    http://localhost:3000
