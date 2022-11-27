@@ -17,9 +17,9 @@ Step 1: start mongodb and mongo-express
     
 _You can access the mongo-express under localhost:8080 from your browser_
     
-Step 2: in mongo-express UI - create a new database "my-db"
+Step 2: in mongo-express UI - create a new database "my-DataBase"
 
-Step 3: in mongo-express UI - create a new collection "users" in the database "my-db"       
+Step 3: in mongo-express UI - create a new collection "users" in the database "my-DataBase"       
     
 Step 4: start node server 
 
