@@ -22,6 +22,7 @@ Step 2: Build your Web_App using Dockerfile and give it a Tag.
     
 The dot "." at the end of the command denotes location of the Dockerfile.
 
+
 Step 3: Push the image to the AWS ECR.
 
     docker push <AWS ECR> 
@@ -29,7 +30,6 @@ Step 3: Push the image to the AWS ECR.
 Step 4: Run container images from mongodb, mongo-express and ECR images using docker-compose in detached mode.
 
     docker-compose -f docker-compose.yaml up -d
-
 
 Step 5: access the mongo-express application from your browser.
 
