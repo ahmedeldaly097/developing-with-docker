@@ -15,7 +15,7 @@ app.get('/', function (req, res) {
   });
 
 app.get('/profile-picture', function (req, res) {
-  let img = fs.readFileSync(path.join(__dirname, "/home/ahmed/docker_app/app/image/image1.jpg"));
+  let img = fs.readFileSync(path.join(__dirname, "image/image1.jpg"));
   res.writeHead(200, {'Content-Type': 'image/jpg' });
   res.end(img, 'binary');
 });
