@@ -12,8 +12,8 @@
         margin-top: 20px;
     }
     img {
-        width: 500px;
-        height: 287px;
+        width: 240px;
+        height: 250px;
         display: block;
         margin-bottom: 20px;
     }
@@ -48,7 +48,7 @@
         const user = await response.json();
         console.log(JSON.stringify(user));
 
-        document.getElementById('name').textContent = user.name ? user.name : 'Ahmed Eldaly';
+        document.getElementById('name').textContent = user.name ? user.name : 'Ahmed Eldaly'
         document.getElementById('email').textContent = user.email ? user.email : 'ahmed.eldaly@example.com';
         document.getElementById('interests').textContent = user.interests ? user.interests : 'coding';
 
@@ -100,9 +100,9 @@
     <div class='container' id='container'>
         <h1>User profile</h1>
         <img src='profile-picture' alt="user-profile">
-        <span>Name: </span><h3 id='name'>Anna Smith</h3>
+        <span>Name: </span><h3 id='name'>Ahmed Eldaly</h3>
         <hr />
-        <span>Email: </span><h3 id='email'>anna.smith@example.com</h3>
+        <span>Email: </span><h3 id='email'>ahmed.eldalyexample.com</h3>
         <hr />
         <span>Interests: </span><h3 id='interests'>coding</h3>
         <hr />
@@ -111,9 +111,9 @@
     <div class='container' id='container-edit'>
         <h1>User profile</h1>
         <img src='profile-picture' alt="user-profile">
-        <span>Name: </span><label for='input-name'></label><input type="text" id='input-name' value='Ahmed Eldaly' />
+        <span>Name: </span><label for='input-name'></label><input type="text" id='input-name' value='Anna Smith' />
         <hr />
-        <span>Email: </span><label for='input-email'></label><input type="email" id='input-email' value='ahmed.eldaly@example.com' />
+        <span>Email: </span><label for='input-email'></label><input type="email" id='input-email' value='anna.smith@example.com' />
         <hr />
         <span>Interests: </span><label for='input-interests'></label><input type="text" id='input-interests' value='coding' />
         <hr />

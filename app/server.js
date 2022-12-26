@@ -15,7 +15,7 @@ app.get('/', function (req, res) {
   });
 
 app.get('/profile-picture', function (req, res) {
-  let img = fs.readFileSync(path.join(__dirname, "image/image1.jpg"));
+  let img = fs.readFileSync(path.join(__dirname, "images/My Photo.jpg"));
   res.writeHead(200, {'Content-Type': 'image/jpg' });
   res.end(img, 'binary');
 });
@@ -33,7 +33,7 @@ let mongoUrlDockerCompose = "mongodb://admin:password@mongodb";
 let mongoClientOptions = { useNewUrlParser: true, useUnifiedTopology: true };
 
 // "user-account" in demo with docker. "my-db" in demo with docker-compose
-let databaseName = "my-DataBase";
+let databaseName = "my-db";
 
 app.post('/update-profile', function (req, res) {
   let userObj = req.body;
