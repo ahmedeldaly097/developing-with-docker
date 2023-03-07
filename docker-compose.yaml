@@ -1,7 +1,7 @@
 version: '3'
 services:
   my-app:
-    image: public.ecr.aws/e7v5r9w0/my_web_app:latest
+    image: ahmedeldaly097/my-node-app:1.0
     ports:
      - 3000:3000
     container_name: my_web_app
